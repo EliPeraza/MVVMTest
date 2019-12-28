@@ -7,6 +7,6 @@ target 'MVVMRefactorTest' do
 
   # Pods for MVVMRefactorTest
     pod 'SnapKit', '~> 5.0'
-    pod 'Alamofire', '5.0.0-rc.3'
+    pod 'Alamofire'
 
 end

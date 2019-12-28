@@ -16,6 +16,7 @@
 		2EB23E7723B7CD2000308647 /* ListPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB23E7623B7CD2000308647 /* ListPostController.swift */; };
 		2EB23E7B23B7CD6B00308647 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB23E7A23B7CD6B00308647 /* PostCell.swift */; };
 		2EB23E7D23B7CE9F00308647 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB23E7C23B7CE9F00308647 /* PostView.swift */; };
+		2EB23E8123B7DD1500308647 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB23E8023B7DD1500308647 /* Constants.swift */; };
 		68661A5F5B643965BE34D1D1 /* Pods_MVVMRefactorTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B6E0F0709603AC384AFEC4 /* Pods_MVVMRefactorTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		2EB23E7623B7CD2000308647 /* ListPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostController.swift; sourceTree = "<group>"; };
 		2EB23E7A23B7CD6B00308647 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		2EB23E7C23B7CE9F00308647 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		2EB23E8023B7DD1500308647 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3E1BCCAC1B5249B781B215A8 /* Pods-MVVMRefactorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRefactorTest.release.xcconfig"; path = "Target Support Files/Pods-MVVMRefactorTest/Pods-MVVMRefactorTest.release.xcconfig"; sourceTree = "<group>"; };
 		996B52B6669A153B212195F1 /* Pods-MVVMRefactorTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRefactorTest.debug.xcconfig"; path = "Target Support Files/Pods-MVVMRefactorTest/Pods-MVVMRefactorTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +79,7 @@
 				2EB23E5E23B7CA8700308647 /* Assets.xcassets */,
 				2EB23E5723B7CA8600308647 /* AppDelegate.swift */,
 				2EB23E6323B7CA8700308647 /* Info.plist */,
+				2EB23E8023B7DD1500308647 /* Constants.swift */,
 			);
 			path = MVVMRefactorTest;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				2EB23E7723B7CD2000308647 /* ListPostController.swift in Sources */,
 				2EB23E7323B7CB4E00308647 /* List.swift in Sources */,
 				2EB23E7523B7CBE500308647 /* ListViewModel.swift in Sources */,
+				2EB23E8123B7DD1500308647 /* Constants.swift in Sources */,
 				2EB23E7D23B7CE9F00308647 /* PostView.swift in Sources */,
 				2EB23E7B23B7CD6B00308647 /* PostCell.swift in Sources */,
 			);
@@ -414,6 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "HF-Self-tutorial-project.MVVMRefactorTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -433,6 +438,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "HF-Self-tutorial-project.MVVMRefactorTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
