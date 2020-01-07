@@ -21,4 +21,12 @@ struct ListViewModel {
         self.body = listPlaceholderText.body
     }
     
+    public func setUserIDField(IDFromUser: Int) -> String {
+        return "User ID \(IDFromUser)"
+    }
+    
+    public func setPostIF(postID: Int) -> String {
+        return "Post ID \(postID)"
+    }
+    
 }

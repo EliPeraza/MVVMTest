@@ -54,7 +54,8 @@ extension ListPostController: UITableViewDelegate, UITableViewDataSource {
         }
         let currentPost = posts[indexPath.row]
         let viewModelThing = ListViewModel.init(listPlaceholderText: currentPost)
-        cell.configureCell(listModelView: viewModelThing)
+        cell.populateCell(listModelView: viewModelThing)
+        cell.formatCell(cell: cell)
         return cell
     }
     
