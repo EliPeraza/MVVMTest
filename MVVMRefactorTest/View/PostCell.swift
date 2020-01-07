@@ -30,6 +30,13 @@ class PostCell: UITableViewCell {
         return bodyText
     }()
     
+    public func configureCell(listModelView: ListViewModel) {
+        self.body.text = listModelView.body
+        self.postID.text = "Post ID: \(listModelView.id)"
+        self.title.text = listModelView.title
+        self.userIDLabel.text = "User ID: \(listModelView.userId)"
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: "PostCellIdentify")
         commonInit()
@@ -59,8 +66,8 @@ extension PostCell {
         userIDLabel.translatesAutoresizingMaskIntoConstraints = false
         userIDLabel.snp.makeConstraints { (make) in
             make.top.equalTo(20)
-            make.trailing.equalTo(-0.20)
-            make.width.equalTo(40)
+            make.leading.equalTo(0.20)
+            make.width.equalTo(80)
             make.height.equalTo(21)
         }
     }
@@ -69,9 +76,9 @@ extension PostCell {
         addSubview(postID)
         postID.translatesAutoresizingMaskIntoConstraints = false
         postID.snp.makeConstraints { (make) in
-            make.top.equalTo(userIDLabel.snp.bottom).offset(11)
+            make.top.equalTo(20)
             make.trailing.equalTo(-0.20)
-            make.width.equalTo(40)
+            make.width.equalTo(80)
             make.height.equalTo(21)
         }
     }
@@ -79,10 +86,13 @@ extension PostCell {
     private func titleLableConstraint() {
         addSubview(title)
         title.translatesAutoresizingMaskIntoConstraints = false
+        title.numberOfLines = 0
+        title.textAlignment = .center
         title.snp.makeConstraints { (make) in
             make.top.equalTo(postID.snp.bottom).offset(11)
             make.height.equalTo(45)
             make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.65)
         }
 
     }
@@ -90,9 +100,11 @@ extension PostCell {
     private func bodyTextViewConstraint() {
         addSubview(body)
         body.translatesAutoresizingMaskIntoConstraints = false
+        body.textAlignment = .center
         body.snp.makeConstraints { (make) in
             make.top.equalTo(title.snp.bottom).offset(20)
-            make.width.equalToSuperview().multipliedBy(0.20)
+            make.centerX.equalToSuperview()
+            make.width.leading.equalTo(11)
             make.height.equalTo(40)
         }
 

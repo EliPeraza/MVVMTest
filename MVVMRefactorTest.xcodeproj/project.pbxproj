@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E55B56123B7E3750096127E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55B56023B7E3750096127E /* NetworkHelper.swift */; };
+		2E55B56323B7E3860096127E /* ListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55B56223B7E3860096127E /* ListAPIClient.swift */; };
+		2E55B56523B7E38E0096127E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E55B56423B7E38E0096127E /* AppError.swift */; };
 		2EB23E5823B7CA8600308647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB23E5723B7CA8600308647 /* AppDelegate.swift */; };
 		2EB23E5D23B7CA8600308647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EB23E5B23B7CA8600308647 /* Main.storyboard */; };
 		2EB23E5F23B7CA8700308647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EB23E5E23B7CA8700308647 /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		02B6E0F0709603AC384AFEC4 /* Pods_MVVMRefactorTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMRefactorTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E55B56023B7E3750096127E /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		2E55B56223B7E3860096127E /* ListAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAPIClient.swift; sourceTree = "<group>"; };
+		2E55B56423B7E38E0096127E /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		2EB23E5423B7CA8600308647 /* MVVMRefactorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMRefactorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB23E5723B7CA8600308647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EB23E5C23B7CA8600308647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +56,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E55B55F23B7E02E0096127E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2E55B56023B7E3750096127E /* NetworkHelper.swift */,
+				2E55B56223B7E3860096127E /* ListAPIClient.swift */,
+				2E55B56423B7E38E0096127E /* AppError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		2EB23E4B23B7CA8600308647 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +87,7 @@
 		2EB23E5623B7CA8600308647 /* MVVMRefactorTest */ = {
 			isa = PBXGroup;
 			children = (
+				2E55B55F23B7E02E0096127E /* Network */,
 				2EB23E7123B7CB2D00308647 /* Controller */,
 				2EB23E7023B7CB2500308647 /* ViewModel */,
 				2EB23E6F23B7CB0A00308647 /* Model */,
@@ -258,13 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E55B56123B7E3750096127E /* NetworkHelper.swift in Sources */,
 				2EB23E5823B7CA8600308647 /* AppDelegate.swift in Sources */,
+				2E55B56523B7E38E0096127E /* AppError.swift in Sources */,
 				2EB23E7723B7CD2000308647 /* ListPostController.swift in Sources */,
 				2EB23E7323B7CB4E00308647 /* List.swift in Sources */,
 				2EB23E7523B7CBE500308647 /* ListViewModel.swift in Sources */,
 				2EB23E8123B7DD1500308647 /* Constants.swift in Sources */,
 				2EB23E7D23B7CE9F00308647 /* PostView.swift in Sources */,
 				2EB23E7B23B7CD6B00308647 /* PostCell.swift in Sources */,
+				2E55B56323B7E3860096127E /* ListAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

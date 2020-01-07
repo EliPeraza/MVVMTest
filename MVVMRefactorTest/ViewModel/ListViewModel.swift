@@ -20,4 +20,5 @@ struct ListViewModel {
         self.title = listPlaceholderText.title
         self.body = listPlaceholderText.body
     }
+    
 }

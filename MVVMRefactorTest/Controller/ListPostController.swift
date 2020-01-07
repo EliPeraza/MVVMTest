@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import Alamofire
 
 class ListPostController: UIViewController {
     let postView = PostView()
-
+    var posts = [List]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.postView.postTableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        getData()
     }
     
     func setupView() {
@@ -21,21 +30,31 @@ class ListPostController: UIViewController {
         self.postView.postTableView.delegate = self
         self.postView.postTableView.dataSource = self
     }
+    
+    func getData() {
+        ListAPIClient.getListData { (appError, data) in
+            if let error = appError {
+                print(error)
+            }
+            if let successData = data {
+                self.posts = successData
+            }
+        }
+    }
 }
 
 extension ListPostController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.postView.postTableView.dequeueReusableCell(withIdentifier: "PostCellIdentify", for: indexPath) as? PostCell else {
             return UITableViewCell()
         }
-        cell.body.text = "dddd"
-        cell.postID.text = "1"
-        cell.userIDLabel.text = "2"
-        cell.title.text = "sss"
+        let currentPost = posts[indexPath.row]
+        let viewModelThing = ListViewModel.init(listPlaceholderText: currentPost)
+        cell.configureCell(listModelView: viewModelThing)
         return cell
     }
     
